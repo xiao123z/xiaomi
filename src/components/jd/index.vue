@@ -210,7 +210,7 @@ export default {
   wx:"",
   gd:"",
   db:"",
-      list:""||JSON.parse( localStorage.getItem('jd')),
+      list:""||JSON.parse( localStorage.getItem('jd'))||"",
        data:{
 client_id: 180100031051,
 channel_id:"",
@@ -232,16 +232,12 @@ page_id: 18642,
 
     }).then((res) => {
       // this.list=res.data
-      console.log(res);
+      this.list=res.data
   this.$store.commit("addjd",res.data)
-     var li= localStorage.getItem('jd')
-     if(li==undefined){
-       localStorage.setItem('jd',JSON.stringify(res.data) )
-     }else{
-       this.list=JSON.parse(li)
-      //  console.log(this.list);
-     }
     });
+  },
+  mounted() {
+    
   },
   methods: {
     // btn(index) {
@@ -267,13 +263,6 @@ page_id: 18642,
   mounted() {
       // this.banners = this.list.data.data.sections[0].body.items;
         //  this.banners = this.list.data.data.sections[0].body.items;
-  console.log(this.list.data.data.sections[0].body.items[0]);
-       this.nd = this.list.data.data.sections[0].body.items[0];
-       this.rm = this.list.data.data.sections[2].body.items[0];
-       this.hx = this.list.data.data.sections[8].body.items[0];
-       this.lx = this.list.data.data.sections[13].body.items[0];
-       this.wx = this.list.data.data.sections[17].body.items[0];
-       this.gd = this.list.data.data.sections[19].body.items[0];
     //    this.jd = this.list.data.data.sections[21].body.items[0];
     //    this.cd = this.list.data.data.sections[29].body.items[0];
     //    this.ej = this.list.data.data.sections[35].body.items[0];
@@ -291,7 +280,15 @@ page_id: 18642,
   },
 
   watch: {
- 
+ list(){
+this.nd = this.list.data.data.sections[0].body.items[0];
+       this.rm = this.list.data.data.sections[2].body.items[0];
+       this.hx = this.list.data.data.sections[8].body.items[0];
+       this.lx = this.list.data.data.sections[13].body.items[0];
+       this.wx = this.list.data.data.sections[17].body.items[0];
+       this.gd = this.list.data.data.sections[19].body.items[0];
+
+ },
     banners() {
       this.$nextTick(function () {
         this.initBanner();

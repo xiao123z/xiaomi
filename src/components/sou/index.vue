@@ -17,7 +17,7 @@ export default {
   components: { Top, Body, Nav },
   data() {
     return {
-      list:JSON.parse(localStorage.getItem('list'))||"" ,
+      list:"" ,
       data:{
 client_id: 180100031051,
         channel_id: "",
@@ -38,15 +38,17 @@ client_id: 180100031051,
       data:dataObj
 
     }).then((res) => {
-      // this.list=res.data
-  this.$store.commit("addList",res.data)
-     var li= localStorage.getItem('list')
-     if(li==undefined){
-       localStorage.setItem('list',JSON.stringify(res.data) )
-     }else{
-       this.list=JSON.parse(li)
+      this.list=res.data
+      console.log(this.list);
+  // this.$store.commit("addList",res.data)
+    //  var li= localStorage.getItem('list')
+    //  if(li==undefined){
+    //    localStorage.setItem('list',JSON.stringify(res.data) )
+    //    this.$router.go(0)
+    //  }else{
+    //    this.list=JSON.parse(li)
 
-     }
+    //  }
     });
   },
   mounted() {

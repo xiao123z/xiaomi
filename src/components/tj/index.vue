@@ -32,7 +32,7 @@
 <img :src="bk.img_url" alt="" srcset="">
 </div>
 <ul class="sj">
-  <li v-for="(item,index) in this.list.data.data.sections[8].body.items" :key="index">
+  <li v-for="(item,index) in  sj1" :key="index">
 <img :src="item.img_url" alt="" srcset="">
 <div class="cr">
   <div class="name">{{item.product_name}}</div>
@@ -43,7 +43,7 @@
 </div>
 
   </li>
-   <li v-for="(item,index) in this.list.data.data.sections[10].body.items" :key="index">
+   <li v-for="(item,index) in sj2" :key="index">
 <img :src="item.img_url" alt="" srcset="">
 <div class="cr">
   <div class="name">{{item.product_name}}</div>
@@ -53,7 +53,7 @@
 </div>
 
   </li>
-  <li v-for="(item,index) in this.list.data.data.sections[12].body.items" :key="index">
+  <li v-for="(item,index) in sj3" :key="index">
 <img :src="item.img_url" alt="" srcset="">
 <div class="cr">
   <div class="name">{{item.product_name}}</div>
@@ -64,7 +64,7 @@
 
   </li>
 
-  <li v-for="(item,index) in this.list.data.data.sections[14].body.items" :key="index">
+  <li v-for="(item,index) in sj4" :key="index">
 <img :src="item.img_url" alt="" srcset="">
 <div class="cr">
   <div class="name">{{item.product_name}}</div>
@@ -72,37 +72,34 @@
 <div class="price">￥{{item.market_price}}</div>
 <div class="buybtn mauto"> 立即购买</div>
 </div>
-
   </li>
 
 </ul>
 
 <div class="list_action_title">
-  {{this.list.data.data.sections[16].body.items[0].action_title}}>
+  {{gdxm}}>
 </div>
 <div class="bk">
 <img :src="xmds.img_url" alt="" srcset="">
 </div>
 <!-- <ul class="sj">
-  <li v-for="(item,index) in this.list.data.data.sections[20].body.items" :key="index">
+  <li v-for="(item,index) in dj1" :key="index">
 <img :src="item.img_url" alt="" srcset="">
 <div class="cr">
   <div class="name">{{item.product_name}}</div>
 <div class="brief">{{item.product_brief}}</div>
 <div class="price">￥{{item.market_price}}</div>
 <div class="buybtn mauto"> 立即购买</div>
-
 </div>
-
   </li></ul> -->
   <div class="list_action_title">
-  {{this.list.data.data.sections[20].body.items[0].action_title}}>
+  {{gdds}}
 </div>
 <div class="bk">
 <img :src="zncp.img_url" alt="" srcset="">
 </div>
 <ul class="sj">
-  <li v-for="(item,index) in this.list.data.data.sections[24].body.items" :key="index">
+  <li v-for="(item,index) in bjb1" :key="index">
 <img :src="item.img_url" alt="" srcset="">
 <div class="cr">
   <div class="name">{{item.product_name}}</div>
@@ -113,7 +110,7 @@
 </div>
 
   </li>
-   <li v-for="(item,index) in this.list.data.data.sections[26].body.items" :key="index">
+   <li v-for="(item,index) in bjb2" :key="index">
 <img :src="item.img_url" alt="" srcset="">
 <div class="cr">
   <div class="name">{{item.product_name}}</div>
@@ -125,19 +122,19 @@
   </li>
   </ul>
    <div class="list_action_title">
-  {{this.list.data.data.sections[28].body.items[0].action_title}}>
+  {{gdxm}}>
 </div>
 <div class="bk">
 <img :src="njzn.img_url" alt="" srcset="">
 </div>
    <div class="list_action_title">
-  {{this.list.data.data.sections[32].body.items[0].action_title}}>
+  {{mjzn}}>
 </div>
 <div class="bk">
 <img :src="znhw.img_url" alt="" srcset="">
 </div>
 <ul class="sj">
-  <li v-for="(item,index) in this.list.data.data.sections[36].body.items" :key="index" style="width:100vw;height:30vh">
+  <li v-for="(item,index) in znhw1" :key="index" style="width:100vw;height:30vh">
 <img :src="item.img_url" alt="" srcset="" style="height:30vh">
 <div class="znh">
   <div class="name">{{item.product_name}}</div>
@@ -147,7 +144,7 @@
 </div>
 </div>
   </li>
-    <li v-for="(item,index) in this.list.data.data.sections[38].body.items" :key="index" style="width:100vw;height:30vh">
+    <li v-for="(item,index) in  znhw2" :key="index" style="width:100vw;height:30vh">
 <img :src="item.img_url" alt="" srcset="" style="height:30vh;float:right">
 <div class="znh">
   <div class="name">{{item.product_name}}</div>
@@ -157,7 +154,7 @@
 </div>
 </div>
   </li>
-    <!-- <li v-for="(item,index) in this.list.data.data.sections[40].body.items" :key="index" style="width:100vw;height:30vh">
+    <li v-for="(item,index) in znhw3" :key="index" style="width:100vw;height:30vh">
 <img :src="item.img_url" alt="" srcset="" style="height:30vh">
 <div class="znh">
   <div class="name">{{item.product_name}}</div>
@@ -166,13 +163,13 @@
  <span class="divcss5">￥{{item.product_org_price}}</span>
 </div>
 </div>
-  </li> -->
+  </li>
   </ul>
    <div class="list_action_title">
-  {{this.list.data.data.sections[40].body.items[0].action_title}}>
+  {{gdmj}}>
 </div>
-<ul>
-   <li v-for="(item,index) in this.list.data.data.sections[42].body.items" :key="index" style="width:50vw;float:left">
+<!-- <ul>
+   <li v-for="(item,index) in mjj" :key="index" style="width:50vw;float:left">
 <img :src="item.img_url" alt="" srcset="" style=" width: 50vw;height:40vh">
   </li>
    <li v-for="(item,index) in this.list.data.data.sections[44].body.items" :key="index" style="width:50vw;float:left">
@@ -181,13 +178,13 @@
    <li v-for="(item,index) in this.list.data.data.sections[46].body.items" :key="index" style="width:50vw;float:left">
 <img :src="item.img_url" alt="" srcset="" style=" width: 50vw;height:40vh">
   </li>
-</ul>
-<div class="bk">
+</ul> -->
+<!-- <div class="bk">
 <img :src="hx.img_url" alt="" srcset="">
-</div>
-<div class="bk">
+</div> -->
+<!-- <div class="bk">
 <img :src="lj.img_url" alt="" srcset="">
-</div>
+</div> -->
 <div style="width:100vw;height:10vh"></div>
   </div> 
 
@@ -195,10 +192,8 @@
 </template>
 <script>
 import Swiper from "swiper";
-
+import {recommend} from '../../api/api'
 import 'swiper/swiper-bundle.css';
-import axios from "axios";
-import qs from 'qs'
 export default {
   props: {
     tj: {
@@ -221,7 +216,24 @@ export default {
       znhw:"",
       hx:"",
       lj:"",
-      list:""||JSON.parse( localStorage.getItem('list')),
+      list:{
+vvv:""
+      },
+      sj1:"",
+      sj2:"",
+      sj3:"",
+      sj4:"",
+      gdxm:"",
+      ds1:"",
+      gdds:"",
+      bjb1:"",
+      bjb2:"",
+      gdxm:"",
+      mjzn:"",
+      znhw1:"",
+      znhw2:"",
+      znhw3:"",
+      gdmj:"",
        data:{
 client_id: 180100031051,
         channel_id: "",
@@ -230,24 +242,7 @@ client_id: 180100031051,
       }
     };
   },
-  // created() {
-  //  var dataObj = qs.stringify(dataObj)
-  //      axios({
-  //     method: "post",
-  //     url: "api/v1/home/page",
-  //   headers: {
-  //   'Content-Type': 'application/x-www-form-urlencoded'
-  // },
-  //     data:dataObj
 
-  //   }).then((res) => {
-  //     this.$nextTick(function () {
-  // this.list=res.data
-  //     });
-    
-  //     console.log(res,111);
-  //   })
-  // },
   methods: {
     // btn(index) {
     //   $(".nav li").eq(index).addClass("ac").siblings().removeClass("ac");
@@ -269,26 +264,43 @@ client_id: 180100031051,
       });
     },
   },
-  mounted() {
-      this.banners = this.list.data.data.sections[0].body.items;
-   
+      async mounted() {
+
+             let ad=await recommend()
+             this.list=ad.data
+    this.banners = ad.data.data.data.sections[0].body.items;
         //  this.banners = this.list.data.data.sections[0].body.items;
-    this.mss = this.list.data.data.sections[1].body.items;
-    this.msx = this.list.data.data.sections[2].body.items;
-    this.rw_r=this.list.data.data.sections[4].body.items[0];
-    this.rw_r1=this.list.data.data.sections[4].body.items[1];
-    this.msx = this.list.data.data.sections[2].body.items;
-    this. rw_r2=this.list.data.data.sections[4].body.items[2];
-    this.bk = this.list.data.data.sections[6].body.items[0];
-    this.xmds = this.list.data.data.sections[18].body.items[0];
-    this.zncp = this.list.data.data.sections[22].body.items[0];
-    this.njzn = this.list.data.data.sections[30].body.items[0];
-    this.znhw = this.list.data.data.sections[34].body.items[0];
-    this.hx = this.list.data.data.sections[48].body.items[0];
-    this.lj = this.list.data.data.sections[49].body.items[0];
-
-
-  },
+    this.mss = ad.data.data.data.sections[1].body.items;
+    this.msx = ad.data.data.data.sections[2].body.items;
+    this.rw_r=ad.data.data.data.sections[4].body.items[0];
+    this.rw_r1=ad.data.data.data.sections[4].body.items[1];
+    // this.msx = ad.data.data.data.sections[2].body.items;
+    this. rw_r2=ad.data.data.data.sections[4].body.items[2];
+      this.bk=ad.data.data.data.sections[6].body.items[0]
+      this.sj1=ad.data.data.data.sections[8].body.items
+     this.sj2= ad.data.data.data.sections[10].body.items
+     this.sj3=ad.data.data.data.sections[12].body.items
+     this.sj4=ad.data.data.data.sections[14].body.items
+     this.gdxm=ad.data.data.data.sections[16].body.items[0].action_title
+    //  this.ds1=ad.data.data.data.sections[20].body.items
+     this.gdds=ad.data.data.data.sections[20].body.items[0].action_title
+    this.xmds =ad.data.data.data.sections[18].body.items[0];
+    this.zncp =ad.data.data.data.sections[22].body.items[0];
+    this.bjb1=ad.data.data.data.sections[24].body.items
+    this.bjb2=ad.data.data.data.sections[26].body.items
+   this.gdxm= ad.data.data.data.sections[28].body.items[0].action_title
+    this.njzn = ad.data.data.data.sections[30].body.items[0];
+    this.znhw =ad.data.data.data.sections[34].body.items[0];
+    // this.list.data.data.sections[36].body.items
+this.znhw1=ad.data.data.data.sections[36].body.items
+    this.mjzn=this.list.data.data.sections[32].body.items[0].action_title
+    this.hx =ad.data.data.data.sections[48].body.items[0];
+    this.lj = ad.data.data.data.sections[49].body.items[0];
+  this.gdmj=ad.data.data.data.sections[40].body.items[0].action_title
+            this.znhw2=ad.data.data.data.sections[37].body.items
+            this.znhw3=ad.data.data.data.sections[38].body.items
+    },
+ 
 
   watch: {
  
@@ -297,7 +309,7 @@ client_id: 180100031051,
         this.initBanner();
       });
     },
-    num() {
+    tj() {
       this.$nextTick(function () {
 
       });

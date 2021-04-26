@@ -13,7 +13,6 @@
     <Ds v-if="num==3?true:false">4wwwwww</Ds>
     <Jd v-if="num==4?true:false">5</Jd>
     <Bjb v-if="num==5?true:false">6</Bjb>
- 
      </div>
 </template>
 <script>
@@ -24,6 +23,7 @@ import Jd from "../jd/index";
 import Bjb from "../bjb/index";
 import Ds from "../ds/index";
 import Tj from "../tj/index";
+import {recommend} from '../../api/api'
 export default {
      components: { Zn, Sj, Jd ,Bjb,Ds,Tj},
      props:{
@@ -43,17 +43,18 @@ export default {
         methods: {
             btn(index){
               $('.nav li').eq(index).addClass('ac').siblings().removeClass('ac');
-                 this.num=index
-        
-            
+                 this.num=index    
+                 
         },
      
             },
-    mounted() {
-   var nav=JSON.parse( localStorage.getItem('list'))
-     this.nav=nav.data.tabs
-     
-     console.log(this.num);
+         created() {
+             
+            },
+      async mounted() {
+
+             let ad=await recommend()
+              this.nav=ad.data.data.tabs
     },
   
 }

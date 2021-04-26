@@ -113,6 +113,7 @@ import Swiper from "swiper";
 import 'swiper/swiper-bundle.css';
 import axios from "axios";
 import qs from 'qs'
+import {phone} from '../../api/api'
 export default {
   props: {
     sj: {
@@ -129,38 +130,37 @@ export default {
       sz:"",
       pj:"",
       rmpj:"",
-      list:""||JSON.parse( localStorage.getItem('sj')),
-       data:{
-client_id: 180100031051,
-channel_id: "",
-webp: 1,
-page_type: "activity",
-page_id: 18845
-      }
+      list:"",
+ 
     };
   },
-  created() { 
-    var dataObj = qs.stringify(this.data)
-       axios({
-      method: "post",
-      url: "api/v1/home/page",
-    headers: {
-    'Content-Type': 'application/x-www-form-urlencoded'
-  },
-      data:dataObj
+async created() { 
+  let dat=await phone()
+ this.list=dat.data
 
-    }).then((res) => {
-      // this.list=res.data
-      console.log(res);
-  this.$store.commit("addsj",res.data)
-     var li= localStorage.getItem('sj')
-     if(li==undefined){
-       localStorage.setItem('sj',JSON.stringify(res.data) )
-     }else{
-       this.list=JSON.parse(li)
-      //  console.log(this.list);
-     }
-    });
+  //      this.$nextTick(function () {
+  //   var dataObj = qs.stringify(this.data)
+  //    axios({
+  //     method: "post",
+  //     url: "api/v1/home/page",
+  //   headers: {
+  //   'Content-Type': 'application/x-www-form-urlencoded'
+  // },
+  //     data:dataObj
+
+  //   }).then((res) => {
+  //     this.list=res.data
+  //     console.log(res);
+  // 
+  //    var li= localStorage.getItem('sj')
+  //    if(li==undefined){
+  //      localStorage.setItem('sj',JSON.stringify(res.data) )
+  //    }else{
+  //      this.list=res.data
+  //     //  console.log(this.list);
+  //    }
+  //   });
+  //      })
   },
   methods: {
    
