@@ -2,7 +2,7 @@
     <div class="main">
         <div class="time4">
        <ul class="nav">
-       <li  v-for="(item ,index) in nav" :key="index" @click="back(index)" :class="index==0?'ac':''">
+       <li  v-for="(item ,index) in nav" :key="index" @click="btn(index)" :class="index==0?'ac':''">
            {{item.name}}</li>
     </ul>
         </div>

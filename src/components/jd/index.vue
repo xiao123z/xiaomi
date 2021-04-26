@@ -78,25 +78,12 @@
 </div>
 </div>
   </li>
-    <li v-for="(item,index) in this.list.data.data.sections[13].body.items" :key="index" style=" position: relative;">
-<div class="tx" v-if="item.product_tag_array">
-    <img :src="item.product_tag_array" alt="" style="width:15vw;height:9vh">
-</div>
-<img :src="item.img_url" alt="" srcset="" >
-<div class="znhh">
-  <div class="name">{{item.product_name}}</div>
-<div class="brief">{{item.product_brief}}</div>   
-<div class="price">￥{{item.product_price}}
- <span class="divcss5">￥{{item.product_org_price}}</span>
-</div>
-</div>
-  </li>
 </ul>
 <div class="nd" style="width:100vw">
 <img :src="lx.img_url" alt="" srcset="" style="width:100vw">
 </div>
 <ul class="zn">
-    <li v-for="(item,index) in this.list.data.data.sections[15].body.items" :key="index" style=" position: relative;">
+    <li v-for="(item,index) in this.list.data.data.sections[14].body.items" :key="index" style=" position: relative;">
 <div class="tx" v-if="item.product_tag_array">
     <img :src="item.product_tag_array" alt="" style="width:15vw;height:9vh">
 </div>
@@ -109,7 +96,7 @@
 </div>
 </div>
   </li>
-    <li v-for="(item,index) in this.list.data.data.sections[17].body.items" :key="index" style=" position: relative;">
+    <li v-for="(item,index) in this.list.data.data.sections[16].body.items" :key="index" style=" position: relative;">
 <div class="tx" v-if="item.product_tag_array">
     <img :src="item.product_tag_array" alt="" style="width:15vw;height:9vh">
 </div>
@@ -130,7 +117,7 @@
 <img :src="gd.img_url" alt="" srcset="" style="width:100vw">
 </div>
 <ul class="zn">
-    <li v-for="(item,index) in this.list.data.data.sections[21].body.items" :key="index" style=" position: relative;">
+    <li v-for="(item,index) in this.list.data.data.sections[20].body.items" :key="index" style=" position: relative;">
 <div class="tx" v-if="item.product_tag_array">
     <img :src="item.product_tag_array" alt="" style="width:15vw;height:9vh">
 </div>
@@ -143,7 +130,7 @@
 </div>
 </div>
   </li>
-     <li v-for="(item,index) in this.list.data.data.sections[23].body.items" :key="index" style=" position: relative;">
+     <li v-for="(item,index) in this.list.data.data.sections[22].body.items" :key="index" style=" position: relative;">
 <div class="tx" v-if="item.product_tag_array">
     <img :src="item.product_tag_array" alt="" style="width:15vw;height:9vh">
 </div>
@@ -156,7 +143,7 @@
 </div>
 </div>
   </li>
-     <li v-for="(item,index) in this.list.data.data.sections[25].body.items" :key="index" style=" position: relative;">
+     <li v-for="(item,index) in this.list.data.data.sections[24].body.items" :key="index" style=" position: relative;">
 <div class="tx" v-if="item.product_tag_array">
     <img :src="item.product_tag_array" alt="" style="width:15vw;height:9vh">
 </div>
@@ -169,7 +156,7 @@
 </div>
 </div>
   </li>
-     <li v-for="(item,index) in this.list.data.data.sections[27].body.items" :key="index" style=" position: relative;">
+     <li v-for="(item,index) in this.list.data.data.sections[26].body.items" :key="index" style=" position: relative;">
 <div class="tx" v-if="item.product_tag_array">
     <img :src="item.product_tag_array" alt="" style="width:15vw;height:9vh">
 </div>
@@ -182,7 +169,7 @@
 </div>
 </div>
   </li>
-    <li v-for="(item,index) in this.list.data.data.sections[29].body.items" :key="index" style=" position: relative;">
+    <li v-for="(item,index) in this.list.data.data.sections[28].body.items" :key="index" style=" position: relative;">
 <div class="tx" v-if="item.product_tag_array">
     <img :src="item.product_tag_array" alt="" style="width:15vw;height:9vh">
 </div>
@@ -278,15 +265,15 @@ page_id: 18642,
     },
   },
   mounted() {
-      this.banners = this.list.data.data.sections[0].body.items;
+      // this.banners = this.list.data.data.sections[0].body.items;
         //  this.banners = this.list.data.data.sections[0].body.items;
-  
+  console.log(this.list.data.data.sections[0].body.items[0]);
        this.nd = this.list.data.data.sections[0].body.items[0];
        this.rm = this.list.data.data.sections[2].body.items[0];
        this.hx = this.list.data.data.sections[8].body.items[0];
-       this.lx = this.list.data.data.sections[14].body.items[0];
-       this.wx = this.list.data.data.sections[18].body.items[0];
-       this.gd = this.list.data.data.sections[20].body.items[0];
+       this.lx = this.list.data.data.sections[13].body.items[0];
+       this.wx = this.list.data.data.sections[17].body.items[0];
+       this.gd = this.list.data.data.sections[19].body.items[0];
     //    this.jd = this.list.data.data.sections[21].body.items[0];
     //    this.cd = this.list.data.data.sections[29].body.items[0];
     //    this.ej = this.list.data.data.sections[35].body.items[0];
