@@ -143,7 +143,7 @@ input {
   left: 0;
   outline: none;
 }
-.left {
+.top .left {
   box-sizing: border-box;
   position: absolute;
   width: 15vw;

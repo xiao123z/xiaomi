@@ -8,6 +8,7 @@ export default createStore({
     ds: JSON.parse(localStorage.getItem('ds')),
     jd: JSON.parse(localStorage.getItem('jd')),
     bjb: JSON.parse(localStorage.getItem('bjb')),
+    fl: JSON.parse(localStorage.getItem('fl')),
   },
   mutations: {
     addList(state, parem) {
@@ -34,6 +35,10 @@ export default createStore({
     addbjb(state, parem) {
       state.bjb = parem
       localStorage.setItem('bjb', JSON.stringify(state.bjb))
+    },
+    addfl(state, parem) {
+      state.fl = parem
+      localStorage.setItem('fl', JSON.stringify(state.fl))
     },
   },
   actions: {},

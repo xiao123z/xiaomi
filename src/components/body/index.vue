@@ -44,7 +44,7 @@ export default {
             btn(index){
               $('.nav li').eq(index).addClass('ac').siblings().removeClass('ac');
                  this.num=index
-                 console.log(111111,this.num);
+        
             
         },
      
